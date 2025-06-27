@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Treasure Hunt</title>
+   <style>
+   body {
+   font-family: Arial, sans-serif;
+   background-color: #f2f2f2;
+   text-align: center;
+   padding: 50px;
+   }
+   input[type="text"] {
+   padding: 10px;
+   margin: 10px;
+   width: 200px;
+   }
+   input[type="button"] {
+   padding: 10px 20px;
+   }
+   </style>
+</head>
+<body>
+   <h1>Treasure Hunt</h1>
+   <input type="text" id="password1" placeholder="Introduceti prima parola" />
+   <input type="text" id="password2" placeholder="Introduceti a doua parola" />
+   <input type="button" value="Verifica" onclick="checkPasswords()" />
+   <p id="message"></p>
+
+   <script>
+   function checkPasswords() {
+   const pass1 = document.getElementById("password1").value;
+   const pass2 = document.getElementById("password2").value;
+   const message = document.getElementById("message");
+
+   if (pass1 === "Taycan" && pass2 === "21") {
+   message.textContent = "Felicitari! Mergi in camera 505 ca sa-ti revendici premiul!";
+   } else {
+   message.textContent = "Parolele nu sunt corecte. Mai incearca o data.";
+   }
+   }
+   </script>
+</body>
+</html>
